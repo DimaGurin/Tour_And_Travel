@@ -62,6 +62,7 @@ li:first-child a{
     background-color: rgb(250, 67, 67);
     transition: background-color 0.5s linear;
     color: #fff;
+    font-size: 1.3em;
 }
 .register {
     width: 132px;
@@ -81,13 +82,61 @@ li:first-child a{
     color: #fff;
     background-color: rgb(250, 67, 67);
     transition: background-color 0.5s linear;
+    font-size: 1.3em;
 }
 .register:hover span {display:none}
 .register:hover::after {content:"Push"}
 
+.sign_icon {
+    display: none;
+}
 
+.autoriz_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-/*end of header*/
+.line {
+    width: 30px;
+    height: 5px;
+    background-color: #5e6070;
+    margin: 4px 0;
+}
+.burger {
+    display: none;
+}
+
+@media screen and (max-width: 760px) {
+    .header {
+        margin-bottom: 70px;
+    }
+    .navigation {
+        display: none;
+    }
+    .burger {
+        margin-left: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 570px) {
+    .autoriz_wrapper {
+        display: none;
+    }
+    .sign_icon {
+        display: block;
+    }
+    .header {
+        margin-bottom: 20px;
+    }
+}
+    
+
+/*-----------------end of header---------------------*/
+
 
 .upperblock {
     margin: 0 auto;
@@ -109,7 +158,7 @@ li:first-child a{
 }
 .upperblock__header {
     margin-bottom: 73px;
-    font-family: Playfair Display;
+    font-family: "Playfair Display";
     font-size: 64px;
     font-weight: 700;
     line-height: 80px;
@@ -130,6 +179,9 @@ li:first-child a{
     cursor: pointer;
     box-shadow: 3px 20px 40px 0px #fb8a1b
 }
+.mobile__button {
+    display: none;
+}
 .upperblock__button:hover {
     background-color: rgb(250, 67, 67);
     transition: background-color 0.5s linear;
@@ -139,14 +191,63 @@ li:first-child a{
     max-width: 687px;
     max-height: 643px;
 }
+@media screen and (max-width: 685px) {
+    .upperblock {
+        margin-bottom: 160px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .upperblock__inner {
+        max-width: 685px;
+        padding: 0 15px;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .upperblock__header {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+        font-size: 10vw;
+    }
+    .upperblock__image {
+        max-width: 600px;
+        max-height: auto;
+    }
+    .upperblock__button {
+        display: none;
+    }
+    .mobile__button {
+        display: block;
+        width: 90%;
+        max-height: 30px;
+        margin-top: 15px;
+        text-align: center;
+        background-color: #FB8F1D;
+        color: #ffffff;
+        border-radius: 5px;
+        border-style: solid;
+        border-color: #FB8F1D;
+        cursor: pointer;
+        box-shadow: 3px 5px 20px 0px #fb8a1b
+    }
 
-/*end of uperblock*/
+}
+@media screen and (max-width: 485px) {
+    .upperblock {
+        margin-bottom: 40px;
+    }
+}
+
+/*----------------end of upperblock----------------------*/
 
 .middleblock {
-    margin: 0 auto;
-    margin-bottom: 298px;
     max-width: 1301px;
     max-height: 644px;
+    margin: 0 auto;
+    margin-bottom: 298px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -193,7 +294,7 @@ li:first-child a{
     max-height: 534px;
 }
 
-/*end of mddleblock*/
+/*--------------------end of mddleblock-----------------------*/
 
 .featured-block {
     font-family: "Playfair Display";
@@ -253,7 +354,7 @@ span {
     line-height: 24px;
 }
 
-/*end of featured-block*/
+/*------------------end of featured-block--------------------*/
 
 .lowerblock {
     margin: 0 auto;
@@ -275,7 +376,7 @@ span {
 }
 .lowerblock__header {
     
-    font-family: Playfair Display;
+    font-family: "Playfair Display";
     font-size: 36px;
     font-weight: 700;
     line-height: 50px;
@@ -308,7 +409,7 @@ span {
     max-height: 643px;
 }
 
-/*end of lowerblock*/
+/*------------------------end of lowerblock---------------------------*/
 
 .testimonials {
     margin: 0 auto;
@@ -329,7 +430,7 @@ span {
     align-items: flex-start;
 }
 .testimonials__header {
-    font-family: Playfair Display;
+    font-family: "Playfair Display";
     font-style: normal;
     font-weight: bold;
     font-size: 36px;
@@ -461,7 +562,7 @@ span {
     /* Урааааааа!!^-^ time: 01.49am */
 }
 
-/*end of testimonials*/
+/*------------------------end of testimonials--------------------*/
 
 .trending-block {
     margin: 0 auto;
@@ -537,7 +638,7 @@ span {
     color: #FB8F1D;
 }
 
-/* end of trending */
+/*-----------------------end of trending----------------------*/
 
 .footer {
     height: 482px;
@@ -562,15 +663,15 @@ span {
     font-family: "Mulish";
     font-style: normal;
     font-weight: 300;
-    font-size: 18px;
-    line-height: 38px;
+    font-size: 3vh;
+    line-height: 6vh;
     color: #848484
 }
 .foot__column span {
     font-family: Mulish;
     font-style: normal;
     font-weight: 300;
-    font-size: 17px;
+    font-size: 2.5vh;
     line-height: 28px;  
 }
 li {
