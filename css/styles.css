@@ -721,11 +721,11 @@ span {
     color: #FB8F1D;
 }
 
-.tranding {
+.trending {
     width: 266px;
     height: 290px;
 }
-.tranding img {
+.trending img {
     width: 100%;
     height: auto;
     border-radius: 10px;
@@ -743,7 +743,7 @@ span {
     position: absolute;
 }
 .trendimage__description p {
-    font-family: Inter;
+    font-family: "Inter";
     font-style: normal;
     font-weight: bold;
     font-size: 19px;
@@ -768,6 +768,59 @@ span {
     text-decoration: none;
     color: #FB8F1D;
 }
+@media screen and (max-width: 800px) {
+    .heading {
+        font-size: 4vw;
+    }
+    .trending {
+        margin-bottom: 160px;
+    }
+    .trending-block {
+        max-height: 800px;
+    }
+    .trendimage__description p {
+        font-size: 17px;
+        line-height: 20px;
+        margin-top: 7px;
+        margin-bottom: 7px;
+    }
+    .trendimage__description span {
+        font-size: 15px;
+        line-height: 15px;
+        text-align: justify;
+        margin-bottom: 10px;
+    }
+}
+@media screen and (max-width: 562px) {
+    .trending {
+        width: 221px;
+        height: 307px;
+    }
+}
+@media screen and (max-width: 482px) {
+    .trending {
+        width: 181px;
+        height: 277px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .trending {
+        width: 136px;
+        height: 232px;
+    }
+    .trendimage__description p {
+        font-size: 4.5vw;
+        line-height: 20px;
+        margin-top: 7px;
+        margin-bottom: 7px;
+    }
+    .trendimage__description span {
+        font-size: 3.5vw;
+        line-height: 15px;
+        margin-bottom: 5px;
+    }
+}
+
 
 /*-----------------------end of trending----------------------*/
 
